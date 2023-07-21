@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Copy and paste the following below in each field and make sure that POS is running in the correct environment,
             tenant and has the corresponding db.
@@ -75,6 +75,7 @@ function App() {
                       onChange={handleChange}
                   />
               </label>
+              <br/>
               <label>
                   Tenant ID:
                   <input
@@ -84,13 +85,16 @@ function App() {
                       onChange={handleChange}
                   />
               </label>
+              <br/>
               <label>
                   HostTabId/s:
-                  <input
+                  <textarea
                       type="text"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
+                      rows={10} // Adjust the number of rows as per your desired size
+                      cols={40} //Adjust the number of columns as per your desired size
                   />
               </label>
               <br/>
